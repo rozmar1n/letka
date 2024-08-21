@@ -3,51 +3,24 @@
 #include<math.h>
 #include<string.h>
 
-
-
 const int ALOT = -1;
 
 int Solver(double* coefficients, double* x1, double* x2);
-
 void InputCoef(double* coefficients);
-
 void coef_exam(double* coefficients);
+void  OutputResults(int nResults, double x1, double x2);
 
- // TODO too many blank lines
+// TODO too many blank lines
 
 int main()
 {
     double coefficients[] {NAN, NAN, NAN},
-                          x1, x2;
-                                               // TODO init your variables (NAN for double)
+           x1, x2;
+
     InputCoef(coefficients);
     coef_exam(coefficients);
-
-    int nResults = ALOT;
-    nResults = Solver(coefficients, &x1, &x2);
-
-    // Make separate function
     // Read about enum
-    switch(nResults)
-    {
-        case 1: printf("У вашего уравнения один корень:  %lg\n", x1);
-                break;
-
-        case 0: printf("У вашего уравнения нет корней\n");
-                break;
-
-        case 2: printf("Первый корень вашего уравнения:  %lg\n"
-                       "Второй корень вашего уравнения:  %lg\n", x1, x2);
-                break;
-
-        case 3: printf("У вашего уравнения два корня с одинаковыми значениеми:  %lg\n", x1);
-                break;
-        case ALOT: printf("У вашего уравнения бесконечное число решений!\n");
-                   break;
-
-        default: printf("Что-то пошло не так...");
-    }
-
+    OutputResults(Solver(coefficients, &x1, &x2), x1, x2);
 }
 
 // TODO use const for coeffs array
@@ -62,7 +35,7 @@ int Solver(double* coefficients, double* x1, double* x2)
 
     if(a == 0)
     {
-        printf("Ваше уравнение не является квадратным, но ладно...\n");
+        printf("Р’Р°С€Рµ СѓСЂР°РІРЅРµРЅРёРµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РєРІР°РґСЂР°С‚РЅС‹Рј, РЅРѕ Р»Р°РґРЅРѕ...\n");
         if(b == 0)
         {
             if(c == 0)
@@ -96,7 +69,7 @@ int Solver(double* coefficients, double* x1, double* x2)
 
 void InputCoef(double* coefficients)
 {
-    printf("Введите коэффициенты вашего квадратного уравнения через пробел и нажмите Enter:  ");
+    printf("Р’РІРµРґРёС‚Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РІР°С€РµРіРѕ РєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ С‡РµСЂРµР· РїСЂРѕР±РµР» Рё РЅР°Р¶РјРёС‚Рµ Enter:  ");
 
     int i = 0, temp = scanf("%lg", coefficients + i);
     i += temp;
@@ -125,15 +98,37 @@ void InputCoef(double* coefficients)
 
 }
 
+void  OutputResults(int nResults, double x1, double x2)
+{
+    switch(nResults)
+    {
+        case 1: printf("РЈ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ РѕРґРёРЅ РєРѕСЂРµРЅСЊ:  %lg\n", x1);
+                break;
+
+        case 0: printf("РЈ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ РЅРµС‚ РєРѕСЂРЅРµР№\n");
+                break;
+
+        case 2: printf("РџРµСЂРІС‹Р№ РєРѕСЂРµРЅСЊ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ:  %lg\n"
+                       "Р’С‚РѕСЂРѕР№ РєРѕСЂРµРЅСЊ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ:  %lg\n", x1, x2);
+                break;
+
+        case 3: printf("РЈ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ РґРІР° РєРѕСЂРЅСЏ СЃ РѕРґРёРЅР°РєРѕРІС‹РјРё Р·РЅР°С‡РµРЅРёРµРјРё:  %lg\n", x1);
+                break;
+        case ALOT: printf("РЈ РІР°С€РµРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ Р±РµСЃРєРѕРЅРµС‡РЅРѕРµ С‡РёСЃР»Рѕ СЂРµС€РµРЅРёР№!\n");
+                   break;
+
+        default: printf("Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє...");
+    }
+}
 
 // const and blank lines
 void coef_exam(double* coefficients)
 {
-    printf("Ваши коэффицинты:\n"
-           "Первый коэффициент:  %lg \n"
-           "Второй коэффициент:  %lg \n"
-           "Третий коэффициент:  %lg \n\n"
-           "Если все верно введите 1 и нажмите Enter, в противном случае введите 0:   ", coefficients[0], coefficients[1], coefficients[2]);
+    printf("Р’Р°С€Рё РєРѕСЌС„С„РёС†РёРЅС‚С‹:\n"
+           "РџРµСЂРІС‹Р№ РєРѕСЌС„С„РёС†РёРµРЅС‚:  %lg \n"
+           "Р’С‚РѕСЂРѕР№ РєРѕСЌС„С„РёС†РёРµРЅС‚:  %lg \n"
+           "РўСЂРµС‚РёР№ РєРѕСЌС„С„РёС†РёРµРЅС‚:  %lg \n\n"
+           "Р•СЃР»Рё РІСЃРµ РІРµСЂРЅРѕ РІРІРµРґРёС‚Рµ 1 Рё РЅР°Р¶РјРёС‚Рµ Enter, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ РІРІРµРґРёС‚Рµ 0:   ", coefficients[0], coefficients[1], coefficients[2]);
 
     int result = 2;
     char ch = '\0';
@@ -143,18 +138,17 @@ void coef_exam(double* coefficients)
     switch(result)
     {
         // printf on a new line
-        case 1: printf("Супер!\n\n");
-                break;
-
-        case 0: printf("Жаль, давайте попробуем еще раз\n");
-                InputCoef(coefficients);
-                coef_exam(coefficients);
-                break;
-
-        default: printf("Вы ввели не тот символ, давайте попробуем еще раз\n");
-
-                 coef_exam(coefficients);
-
-                 break;
+        case 1:
+            printf("РЎСѓРїРµСЂ!\n\n");
+            break;
+        case 0:
+            printf("Р–Р°Р»СЊ, РґР°РІР°Р№С‚Рµ РїРѕРїСЂРѕР±СѓРµРј РµС‰Рµ СЂР°Р·\n");
+            InputCoef(coefficients);
+            coef_exam(coefficients);
+            break;
+        default:
+            printf("Р’С‹ РІРІРµР»Рё РЅРµ С‚РѕС‚ СЃРёРјРІРѕР», РґР°РІР°Р№С‚Рµ РїРѕРїСЂРѕР±СѓРµРј РµС‰Рµ СЂР°Р·\n");
+            coef_exam(coefficients);
+            break;
     }
 }
