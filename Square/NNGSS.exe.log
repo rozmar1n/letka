@@ -1,0 +1,148 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\codes\letka\Square\NNGSS.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76F19F51 в функции strtok(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0067717C (32-bit), Flags: Cmdre0, Thread: 0x3E358 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76F19F51 in C:\WINDOWS\System32\msvcrt.dll: strtok()
+# 1 0x00471B7C in D:\codes\letka\Square\NNGSS.exe: SquareSolverTester()
+# 2 0x0041C801 in D:\codes\letka\Square\NNGSS.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2024 19:21:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 27 2024 13:41:37
+
+Run file:	D:\codes\letka\Square\NNGSS.exe
+Directory:	D:\codes\letka\Square
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\codes\letka\Square\NNGSS.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76F19F51 в функции strtok(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0067717C (32-bit), Flags: Cmdre0, Thread: 0x3E358 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76F19F51 in C:\WINDOWS\System32\msvcrt.dll: strtok()
+# 1 0x00471B7C in D:\codes\letka\Square\NNGSS.exe: SquareSolverTester()
+# 2 0x0041C801 in D:\codes\letka\Square\NNGSS.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2024 19:21:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 27 2024 13:41:37
+
+Run file:	D:\codes\letka\Square\NNGSS.exe
+Directory:	D:\codes\letka\Square
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\codes\letka\Square\NNGSS.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76F19F51 в функции strtok(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0067717C (32-bit), Flags: Cmdre0, Thread: 0x3D8E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76F19F51 in C:\WINDOWS\System32\msvcrt.dll: strtok()
+# 1 0x00471B7C in D:\codes\letka\Square\NNGSS.exe: SquareSolverTester()
+# 2 0x0041C801 in D:\codes\letka\Square\NNGSS.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2024 19:21:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 27 2024 13:43:36
+
+Run file:	D:\codes\letka\Square\NNGSS.exe
+Directory:	D:\codes\letka\Square
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\codes\letka\Square\NNGSS.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76F19F51 в функции strtok(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0067717C (32-bit), Flags: Cmdre0, Thread: 0x3D8E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76F19F51 in C:\WINDOWS\System32\msvcrt.dll: strtok()
+# 1 0x00471B7C in D:\codes\letka\Square\NNGSS.exe: SquareSolverTester()
+# 2 0x0041C801 in D:\codes\letka\Square\NNGSS.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 24 2024 19:21:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Aug 27 2024 13:43:36
+
+Run file:	D:\codes\letka\Square\NNGSS.exe
+Directory:	D:\codes\letka\Square
+
+--------------------------------------------------

@@ -1,16 +1,17 @@
 #include"SquareSolver.h"
 #include "file.h"
 
-pred_ans SquareSolver(square_eq_coef coefficients)
+pred_sol SquareSolver(square_eq_coef coefficients)
 {
     double a = coefficients.a, b = coefficients.b, c = coefficients.c;
     double x1 = NAN, x2 = NAN;
 
-    if(a != a or b != b || c != c)
+    if(int(a) != int(a) or int(b) != int(b) || int(c) != int(c))
     {
         return {x1, x2, 0};
     }
-    if(fabs(a - 0) < 0.00001 || a != a)
+
+    if(fabs(a - 0) < 0.00001 || int(a) != int(a))
     {
         if(fabs(b - 0) < 0.00001)
         {
@@ -27,12 +28,14 @@ pred_ans SquareSolver(square_eq_coef coefficients)
             return {x1, x2, 1};
         }
     }
+
     double D;
     D = b*b - 4*a*c;
     if(D < 0.0)
     {
         return {NAN, NAN, 0};
     }
+
     x1 = (-b + sqrt(D))/(2*a);
     x2 = (-b - sqrt(D))/(2*a);
 

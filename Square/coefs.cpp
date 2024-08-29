@@ -1,6 +1,7 @@
 #include"coefs.h"
 #include"file.h"
 
+
 void ClearBuffer()
 {
     char ch = '\0';
@@ -9,7 +10,6 @@ void ClearBuffer()
         ch = char(getchar());
     }
 }
-
 void InputCoef(square_eq_coef* coefficients)
 {
     printf("Введите коэффициенты вашего квадратного уравнения через пробел и нажмите Enter:  ");
@@ -62,8 +62,7 @@ void InputCoef(square_eq_coef* coefficients)
     }
     ClearBuffer();
 }
-
-void  OutputResults(pred_ans results)
+void  OutputResults(pred_sol results)
 {
     switch(results.nRootsPred)
     {
@@ -85,9 +84,9 @@ void  OutputResults(pred_ans results)
             exit(0);
     }
 }
-void coef_exam(square_eq_coef* coefficients)
+void CoefExam(square_eq_coef* coefficients)
 {
-    if(coefficients->a != coefficients->a || coefficients->b != coefficients->b || coefficients->c != coefficients->c)
+    if(int(coefficients->a) != int(coefficients->a) || int(coefficients->b) != int(coefficients->b) || int(coefficients->c) != int(coefficients->c))
     {
         printf("\nВВОД ВЫПОЛНЕН НЕВЕРНО!!!\n");
         char ch = '\0';
@@ -101,7 +100,7 @@ void coef_exam(square_eq_coef* coefficients)
         }
         ClearBuffer();
         InputCoef(coefficients);
-        coef_exam(coefficients);
+        CoefExam(coefficients);
     }
     else
     {
@@ -123,13 +122,17 @@ void coef_exam(square_eq_coef* coefficients)
             case 0:
                 printf("Жаль, давайте попробуем еще раз\n");
                 InputCoef(coefficients);
-                coef_exam(coefficients);
+                CoefExam(coefficients);
+                break;
+            case 2:
+                printf("ВВОД ВЫПОЛНЕН НЕ ВЕРНО АААААА!!!!!");
+                exit(0);
                 break;
             default:
                 printf("Вы ввели не тот символ, давайте попробуем еще раз\n");
                 if(temp)
                 {
-                    coef_exam(coefficients);
+                    CoefExam(coefficients);
                 }
                 break;
         }

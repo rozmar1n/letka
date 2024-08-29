@@ -1,0 +1,19 @@
+/**@file*/
+
+#include"TXLib.h"
+#include<stdio.h>
+#include<string.h>
+/*!
+	\brief int main is the simpliest function that help me understand how works openning csv files
+*/
+int main(void)
+{
+    //FILE *
+    //printf("Hello world");
+    int a = 0,
+        b = -0;
+    if(a == b)
+    {
+        printf()
+    }
+}
