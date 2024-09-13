@@ -6,8 +6,9 @@
 /*!
     Function that tests our program
 
-
 */
+
 void SquareSolverTester(const char *File);
 void RunTest(square_equation test, unsigned int test_number);
+
 #endif

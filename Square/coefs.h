@@ -2,6 +2,7 @@
 #ifndef CoefFunctions
 #define CoefFunctions
 #include "file.h"
+void ElemInput(int number_of_coefficient, double *coefficient, int* counters);
 ///\brief Function that moves the caret to the end of the input
 void ClearBuffer();
 /*!

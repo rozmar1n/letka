@@ -6,7 +6,7 @@ matrix SquareArrSum(matrix square_1, matrix square_2)
 {
     if(square_1.size_X != square_2.size_X || square_1.size_Y != square_2.size_Y)
     {
-        printf("Вы ввели какую-то хуйню!!! Т.е. размеры матриц не совпадают\n");
+        printf("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!!! пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
         return(square_1);
     }
 

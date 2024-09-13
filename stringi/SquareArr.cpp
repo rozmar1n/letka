@@ -10,7 +10,7 @@ void ClearBuffer()
     }
     if(ch == EOF)
     {
-        printf("Р’РІРѕРґ С„Р°Р№Р»Р° РЅРµРѕР¶РёРґР°РЅРЅРѕ Р·Р°РІРµСЂС€РµРЅ!!!");
+        printf("File input terminated unexpectedly!!!\n");
         exit(0);
     }
 }
@@ -52,33 +52,23 @@ matrix RectInput()
     scanf("%u", &size_x);
     ClearBuffer();
 
-
     int* start = (int*)calloc(size_x*size_y, sizeof(int));
     int temp = 1;
-
-
+    char ch = '\0';
+    printf("Enter the elements of matrix in 1 line:   ");
+    
     for(size_t Y = 0; Y < size_y; Y++)
     {
         for(size_t X = 0; X < size_x; X++)
         {
-            temp = scanf("%d ", start + Y * size_x + X);
+            temp = scanf("%d%c", start + Y * size_x + X, &ch);
         }
-        if(temp != 1)
+        if(ch == '\n')
         {
-            ClearBuffer();
-            return {start, size_x, size_y};
+            //ClearBuffer();
+            return{start, size_x, size_y};
         }
     }
     ClearBuffer();
     return{start, size_x, size_y};
 }
-/*void RectInput(matrix int_rect)
-{
-    for(size_t Y = 0; Y < int_rect.size_Y; Y++)
-    {
-        for(size_t X = 0; X < int_rect.size_X; X++)
-        {
-            scanf("%d ", int_rect.start + Y * int_rect.size_Y + X);
-        }
-    }
-}*/

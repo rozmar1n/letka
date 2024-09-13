@@ -9,4 +9,5 @@ struct matrix
     size_t size_X;
     size_t size_Y;
 };
+
 #endif

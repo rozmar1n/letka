@@ -11,10 +11,10 @@ matrix SquareArrMult(matrix rect_1, matrix rect_2)
 {
     if(rect_1.size_X != rect_2.size_Y)
     {
-        printf("Вы ввели какую-то хуйню!!! Т.е. количество столбцов первой матрицы не совпадает с количеством строк второй матрицы\n");
+        printf("You entered some shit!!! The number of columns of the first matrix does not match the number of rows of the second matrix\n");
         return(rect_1);
     }
-
+    
     size_t vert = rect_1.size_Y;
     size_t hor = rect_2.size_X;
     int* start = (int*)calloc(hor * vert, sizeof(int));

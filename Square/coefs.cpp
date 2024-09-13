@@ -1,6 +1,28 @@
 #include"coefs.h"
 #include"file.h"
 
+void ElemInput(int number_of_coefficient, double *coefficient, int* counter)
+{
+
+    while(*counter < number_of_coefficient)
+    {
+        char ch;
+
+        *counter +=scanf("%lg", coefficient);
+        if(*counter < number_of_coefficient)
+        {
+            ch = char(getchar());
+        }
+        if(ch == EOF)
+        {
+            printf("The file is finished\n");
+            exit(0);
+        }
+
+    }
+    return;
+}
+
 
 void ClearBuffer()
 {
@@ -10,85 +32,54 @@ void ClearBuffer()
         ch = char(getchar());
     }
 }
+
+
 void InputCoef(square_eq_coef* coefficients)
 {
-    printf("Введите коэффициенты вашего квадратного уравнения через пробел и нажмите Enter:  ");
+    printf("Entering the coefficients:  ");
 
-    int temp = 0;
-    char ch = '\0';
+    int counter = 0;
 
-    printf("\nВведите первый коэффициент:  ");
-    while(temp < 1)
-    {
-        temp +=scanf("%lg", &coefficients->a);
-        if(temp < 1)
-        {
-            ch = char(getchar());
-        }
-        if(ch == EOF)
-        {
-            printf("НЕВЕРНЫЙ ВВОД\n");
-            exit(0);
-        }
-    }
-    printf("Введите второй коэффициент:  ");
-    while(temp < 2)
-    {
+    printf("\nEnter the first coefficient:  ");
+    ElemInput(1, &coefficients->a, &counter);
+    printf("Enter the second coefficient:  ");
+    ElemInput(2, &coefficients->b, &counter);
+    printf("Enter the third coefficient:  ");
+    ElemInput(3, &coefficients->c, &counter);
 
-        temp +=scanf("%lg", &coefficients->b);
-        if(temp < 2)
-        {
-            ch = char(getchar());
-        }
-        if(ch == EOF)
-        {
-            printf("НЕВЕРНЫЙ ВВОД\n");
-            exit(0);
-        }
-    }
-    printf("Введите третий коэффициент:  ");
-    while(temp < 3)
-    {
-        temp +=scanf("%lg", &coefficients->c);
-        if(temp < 3)
-        {
-            ch = char(getchar());
-        }
-        if(ch == EOF)
-        {
-            printf("НЕВЕРНЫЙ ВВОД\n");
-            exit(0);
-        }
-    }
     ClearBuffer();
 }
+
+
 void  OutputResults(pred_sol results)
 {
     switch(results.nRootsPred)
     {
         case 0:
-            printf("У вашего уравнения нет корней\n");
+            printf("Your equation has no roots\n");
             break;
         case 1:
-            printf("У вашего уравнения один корень:  %lg\n", results.x1Pred);
+            printf("Your equation has one root:  %lg\n", results.x1Pred);
             break;
         case 2:
-            printf("Первый корень вашего уравнения:  %lg\n"
-                   "Второй корень вашего уравнения:  %lg\n", results.x1Pred, results.x2Pred);
+            printf("First root:  %lg\n"
+                   "Second root:  %lg\n", results.x1Pred, results.x2Pred);
             break;
         case -1:
-            printf("У вашего уравнения бесконечное число решений!\n");
+            printf("Your equation has Infinity roots!\n");
             break;
         default:
-            printf("Что-то пошло не так...");
+            printf("Something went wrong...");
             exit(0);
     }
 }
+
+
 void CoefExam(square_eq_coef* coefficients)
 {
     if(int(coefficients->a) != int(coefficients->a) || int(coefficients->b) != int(coefficients->b) || int(coefficients->c) != int(coefficients->c))
     {
-        printf("\nВВОД ВЫПОЛНЕН НЕВЕРНО!!!\n");
+        printf("\nTHE INPUT WAS INCORRECT AAAAAAA!!!\n");
         char ch = '\0';
         while(ch != '\n')
         {
@@ -104,11 +95,11 @@ void CoefExam(square_eq_coef* coefficients)
     }
     else
     {
-            printf("Ваши коэффицинты:\n"
-           "Первый коэффициент:  %lg \n"
-           "Второй коэффициент:  %lg \n"
-           "Третий коэффициент:  %lg \n\n"
-           "Если все верно введите 1 и нажмите Enter, в противном случае введите 0:   ", coefficients->a, coefficients->b, coefficients->c);
+            printf("Your coefficients:\n"
+            "The first coef:  %lg \n"
+            "The second coef:  %lg \n"
+            "The third coef:  %lg \n\n"
+            "If everything is correct, enter 1 and press Enter, otherwise enter 0:   ", coefficients->a, coefficients->b, coefficients->c);
 
         int result = 2;
 
@@ -117,19 +108,19 @@ void CoefExam(square_eq_coef* coefficients)
         switch(result)
         {
             case 1:
-                printf("Супер!\n\n");
+                printf("Great!\n\n");
                 break;
             case 0:
-                printf("Жаль, давайте попробуем еще раз\n");
+                printf("Too bad, let's try again\n");
                 InputCoef(coefficients);
                 CoefExam(coefficients);
                 break;
             case 2:
-                printf("ВВОД ВЫПОЛНЕН НЕ ВЕРНО АААААА!!!!!");
+                printf("THE INPUT WAS INCORRECT AAAAAAA!!!!!");
                 exit(0);
                 break;
             default:
-                printf("Вы ввели не тот символ, давайте попробуем еще раз\n");
+                printf("You entered the wrong character, let's try again\n");
                 if(temp)
                 {
                     CoefExam(coefficients);
