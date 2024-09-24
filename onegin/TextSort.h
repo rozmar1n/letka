@@ -7,6 +7,8 @@
 #include<ctype.h>
 #include"ForString.h"
 
-void TextSort(const char* index[], int LineAmount, int MaxLine);
+typedef int(*compar_func_t)(char* string_1, char* string_2, int string_1_size, int string_2_size, int MaxLine);
+
+void TextSort(char** index, int* StringsSizes, int LineAmount, int MaxLine, compar_func_t Comparator);
 
 #endif

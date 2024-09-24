@@ -16,9 +16,9 @@ int main(void)
     
     
     
-    #if 0
+    #if 1
     
-        #if 1
+        #if 0
 
         matrix int_rect_1 = RectInput();
         matrix int_rect_2 = RectInput();

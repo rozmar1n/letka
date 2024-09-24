@@ -6,7 +6,7 @@
 #include<string.h>
 #include<ctype.h>
 
-void OutputConstText(const char** textik, int LineAmount);
-void MakeIndex(const char** textik, const char* index[], int AmountOfLines);
+void OutputByIndexes(char** indexes, int AmoutOfLines);
+char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, int** lines);
 
 #endif

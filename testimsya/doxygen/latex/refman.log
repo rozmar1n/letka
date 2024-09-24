@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.12)  25 AUG 2024 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.12)  23 SEP 2024 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -736,8 +736,7 @@ tex.def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count343
 \l__pdf_internal_box=\box123
-)
-No file refman.aux.
+) (refman.aux)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
@@ -820,12 +819,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package backref Info: ** backref set up for natbib ** on input line 209.
 Package hyperref Info: Link coloring ON on input line 209.
+(refman.out) (refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-No file refman.toc.
+\Etoc@tf=\read4
 Package hyperref Info: Option `pageanchor' set `false' on input line 217.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 217.
 
@@ -834,7 +834,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 222.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 224.
-[1
+ [1
 
 
 {C:/Users/Roman/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Roma
@@ -844,37 +844,106 @@ n/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2
 \tf@toc=\write6
 \openout6 = `refman.toc'.
 
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 230.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 230
+.
+
+(C:\Users\Roman\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 230
+.
+
+(C:\Users\Roman\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 23
+0.
+
+(C:\Users\Roman\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 230.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 230.
+
+[1] [2
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 233.
 
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 235.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 235.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 235.
+(files.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+) [1
+
+] [2
+
+]
+Chapter 2.
+(main_8cpp.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 3.
+
+
+(C:\Users\Roman\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
+.
+(C:\Users\Roman\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 11.
+)
+[3] [4
+
+]
 No file refman.ind.
 (refman.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
-
-
-Package rerunfilecheck Warning: File `refman.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `refman.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: 59A1A10597590145CC611DF171FA4AB0;581.
  ) 
 Here is how much of TeX's memory you used:
- 17506 strings out of 474591
- 280676 string characters out of 5745777
- 1925533 words of memory out of 5000000
- 39426 multiletter control sequences out of 15000+600000
- 566454 words of font info for 43 fonts, out of 8000000 for 9000
+ 17703 strings out of 474591
+ 284162 string characters out of 5745777
+ 1927533 words of memory out of 5000000
+ 39563 multiletter control sequences out of 15000+600000
+ 593095 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,5n,117p,329b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a
-.pfb>
-Output written on refman.pdf (2 pages, 9214 bytes).
+ 101i,11n,117p,329b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courie
+r/ucrr8a.pfb><C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helv
+etic/uhvb8a.pfb><C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/urw/h
+elvetic/uhvr8a.pfb><C:/Users/Roman/AppData/Local/Programs/MiKTeX/fonts/type1/ur
+w/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (8 pages, 56420 bytes).
 PDF statistics:
- 19 PDF objects out of 1000 (max. 8388607)
- 1 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
