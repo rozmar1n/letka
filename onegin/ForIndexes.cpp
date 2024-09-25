@@ -4,7 +4,7 @@
 #include<ctype.h>
 #include"ForIndexes.h"
 
-char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, int** lines)//РїРµСЂРµРґРµР»Р°С‚СЊ РґР»СЏ С‡С‚РµРЅРёСЏ РёР· С„Р°Р№Р»Р°
+char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, int** lines)
 {
     char symbol = '\0';
     int nstrings = 0;
@@ -31,7 +31,7 @@ char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, i
         {
             if (symbol == '\n')
             {
-                lines_in_func[nstrings] = ThatString;
+                lines_in_func[nstrings] = ThatString - 1;
                 nstrings++;
                 
                 textik[i] = '\0';
@@ -63,10 +63,37 @@ char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, i
     return indexes;
 }
 
+char* PutText(const char *TextFile, long* TextSize)
+{
+    FILE *OneginText = fopen(TextFile, "r");
+    char* buffer = NULL;
+    
+    if(!OneginText)
+    {
+        fprintf(stderr, "We cannot open your file!\n");
+        return buffer;
+    }
+    else
+    {
+        fseek(OneginText, 0, SEEK_END);
+        long OneginSize = ftell(OneginText);
+
+        buffer = (char*)calloc(OneginSize + 1, sizeof(char));
+
+        rewind(OneginText);
+        fread(buffer, sizeof(char), OneginSize, OneginText);
+        fclose(OneginText);
+        buffer[OneginSize + 1] = '\0';
+        
+        *TextSize = OneginSize + 1;
+        return buffer;
+    }    
+}
+
 void OutputByIndexes(char** indexes, int AmountOfLines)
 {
     for (int string_number = 0; string_number < AmountOfLines + 1; string_number++)
     {
-        printf("%d string: %s\n", string_number, indexes[string_number]);
+        printf("%s\n", indexes[string_number]);
     }
 }

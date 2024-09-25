@@ -1,4 +1,4 @@
-#include"ForString.h"
+#include"ForSort.h"
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -73,8 +73,8 @@ int Comparator_1(char* string_1, char* string_2, int string_1_size, int string_2
 
 int Comparator_2(char* string_1, char* string_2, int string_1_size, int string_2_size, int MaxLine)
 {
-    int i = string_1_size-1;
-    int j = string_2_size-1;
+    int i = string_1_size;
+    int j = string_2_size;
     for (int symbol = 0; symbol < MaxLine; symbol++)
     {
         if((isalpha(string_1[i]) || string_1[i] == '\0' || string_1[i] == '\n') && (isalpha(string_2[j])|| string_2[j] == '\0' || string_2[j] == '\n'))

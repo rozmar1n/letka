@@ -8,5 +8,6 @@
 
 void OutputByIndexes(char** indexes, int AmoutOfLines);
 char** MakeIndex(char* textik, int* AmountOfLines, int TextSize, int* MaxLine, int** lines);
+char* PutText(const char *TextFile, long* TextSize);
 
 #endif

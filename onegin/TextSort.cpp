@@ -4,7 +4,7 @@
 #include<string.h>
 #include<ctype.h>
 
-#include"ForString.h"
+#include"ForSort.h"
 
 void TextSort(char** index, int* StringsSizes, int LineAmount, int MaxLine, compar_func_t Comparator)
 {

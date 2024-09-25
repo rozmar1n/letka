@@ -1,65 +1,36 @@
-#include<stdio.h>
 #include"TXLib.h"
+#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<ctype.h>
 
 #include"ForIndexes.h"
-#include"ForString.h"
+#include"ForSort.h"
 #include"TextSort.h"
 
-const char* stringa = "always contented with his life,";
-
-char* PutText(const char *TextFile, long* TextSize);
-
-int main(void)
+int main(int argc, char *argv[])
 {
 
     char* text = NULL;
     long TextSize = 0;
     
-    text = PutText("onegin.txt", &TextSize);
+    if (argc > 1)
+    {
+        text = PutText(argv[1], &TextSize);
+    }
+    else
+    {
+        text = PutText("onegin.txt", &TextSize);
+    }
 
     char** string_indexus = NULL;
     int AmountOfLines = 0;
     int MaxLine = 0;
+    int* string_sizes = NULL;
 
-    int* lines = NULL;
-
-    string_indexus = MakeIndex(text, &AmountOfLines, TextSize, &MaxLine, &lines);
+    string_indexus = MakeIndex(text, &AmountOfLines, TextSize, &MaxLine, &string_sizes);
     
-
-    TextSort(string_indexus, lines, AmountOfLines, MaxLine, Comparator_1);
+    TextSort(string_indexus, string_sizes, AmountOfLines, MaxLine, Comparator_1);
     OutputByIndexes(string_indexus, AmountOfLines);
+    return 0;
 }
-
-char* PutText(const char *TextFile, long* TextSize)
-{
-    FILE *OneginText = fopen(TextFile, "r");
-    char* buffer = NULL;
-    
-    if(!OneginText)
-    {
-        fprintf(stderr, "We cannot open your file!\n");
-        return buffer;
-    }
-    else
-    {
-        fseek(OneginText, 0, SEEK_END);
-        long OneginSize = ftell(OneginText);
-
-        buffer = (char*)calloc(OneginSize + 1, sizeof(char));
-
-        rewind(OneginText);
-        fread(buffer, sizeof(char), OneginSize, OneginText);
-        fclose(OneginText);
-        buffer[OneginSize + 1] = '\0';
-        
-        *TextSize = OneginSize + 1;
-        return buffer;
-    }    
-}
-
-
-
-
